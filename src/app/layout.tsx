@@ -3,6 +3,7 @@ import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
+import { Metadata } from "next";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -26,6 +27,11 @@ const satoshi = localFont({
   variable: "--font-satoshi",
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  title: "NexTask",
+  description: "Your productivity companion for seamless task management",
+};
 
 export default function RootLayout({
   children,

@@ -11,10 +11,14 @@ const nextConfig: NextConfig = {
     ],
   },
   async rewrites() {
+    const apiUrl =
+      process.env.NEXT_PUBLIC_API_URL ||
+      "https://server-nextask-production.up.railway.app";
+
     return [
       {
         source: "/api/:path*",
-        destination: "https://server-nextask-production.up.railway.app/:path*",
+        destination: `${apiUrl}/:path*`,
       },
     ];
   },
