@@ -13,7 +13,7 @@ export default function RegisterPage() {
     email: string,
     password: string,
   ) => {
-    await api.post("/users", {
+    await api.post("/users/register", {
       name,
       email,
       password,
